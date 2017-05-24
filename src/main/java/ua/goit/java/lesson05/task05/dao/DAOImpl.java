@@ -1,0 +1,71 @@
+package ua.goit.java.lesson05.task05.dao;
+
+import ua.goit.java.lesson05.task05.entity.Room;
+
+/**
+ * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
+ */
+public class DAOImpl implements DAO {
+
+    private final static int DEFAULT_CAPACITY = 10;
+
+    private Room[] rooms = new Room[DEFAULT_CAPACITY];
+
+    private int count = 0;
+
+    @Override
+    public Room[] save(Room room) {
+        System.out.println("Save " + room);
+        checkCapacity();
+        this.rooms[count++] = room;
+        return this.rooms;
+    }
+
+    private void checkCapacity() {
+        if (this.count + 1 >= this.rooms.length) {
+            final Room[] temp = this.rooms;
+            this.rooms = new Room[temp.length * 3 / 2 + 1];
+            System.arraycopy(temp, 0, this.rooms, 0, temp.length);
+        }
+    }
+
+    @Override
+    public boolean delete(Room room) {
+        System.out.println("Delete " + room);
+        boolean result = false;
+        for (int i = 0; i < this.count; i++) {
+            if (this.rooms[i].equals(room)) {
+                for (int j = i; i < this.count - 1; i++) {
+                    this.rooms[j] = this.rooms[j + 1];
+                }
+                result = true;
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public Room update(Room room) {
+        System.out.println("Update " + room);
+        Room savingRoom = null;
+        for (int i = 0; i < this.count; i++) {
+            if (this.rooms[i].getId() == room.getId()) {
+                savingRoom = this.rooms[i] = room;
+            }
+        }
+        return savingRoom;
+    }
+
+    @Override
+    public Room findById(Room room) {
+        System.out.println("Find By Id " + room);
+        Room result = null;
+        for (Room _room : this.rooms) {
+            if (room.getId() == _room.getId()) {
+                result = room;
+                break;
+            }
+        }
+        return result;
+    }
+}
