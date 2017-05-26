@@ -1,6 +1,6 @@
 # [![GoIt Java](goit-logo.jpg)](http://java.new.goit.ua)
 
-## Java Homework
+## Java Core Homework
 
 ### [Домашнее задание № 2.1](/src/main/java/ua/goit/java/lesson02/task01)
 Input: array with size = 10 can be of one of two data types: int and double.
@@ -20,7 +20,6 @@ As a result you should have methods with following names :
 - multiplication  (int array[]), multiplication (double[])
 - modulus(int array[]), modulus(double[])
 - secondLargest(int array[]), secondLargest(double[])
-
 
 ### [Домашнее задание № 2.2](/src/main/java/ua/goit/java/lesson02/task02)
 Continue with BANK example
@@ -57,7 +56,6 @@ Print OK + commission + balance after withdrawal. Print NO is withdrawal is not 
     </tr>
 </table>
 
-
 ### [Домашнее задание № 2.3](/src/main/java/ua/goit/java/lesson02/task03)
 You need to write method which withdraw money of particular account owner if he/she can.
 Print name + NO of withdrawal fs not possible and name + sum of withdrawal + balance after
@@ -71,22 +69,18 @@ withdrawal in other case. Commission is 5% for all cases.
     </tr>
     <tr>
         <td>
-            <code>
-                int[] balances = {1200, 250, 2000, 500, 3200}; <br>
-                String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"}; <br>
-                <br>
-                String ownerName = Ann; <br>
-                double withdrawal = 100;
-            </code>
+            int[] balances = {1200, 250, 2000, 500, 3200}; <br>
+            String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"}; <br>
+            <br>
+            String ownerName = Ann; <br>
+            double withdrawal = 100;
         </td>
         <td>
-            <code>
-                int[] balances = {1200, 250, 2000, 500, 3200}; <br>
-                String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"}; <br>
-                <br>
-                String ownerName = Oww; <br>
-                double withdrawal = 490;
-            </code>
+             int[] balances = {1200, 250, 2000, 500, 3200}; <br>
+             String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"}; <br>
+             <br>
+             String ownerName = Oww; <br>
+             double withdrawal = 490;
         </td>
     </tr>
     <tr>
@@ -103,7 +97,6 @@ withdrawal in other case. Commission is 5% for all cases.
     </tr>
 </table>
 
-
 ### [Домашнее задание № 2.4](/src/main/java/ua/goit/java/lesson02/task04)
 You need to write method which will fund (пополнение) balance of particular user.
 Print name + balance after funding
@@ -114,14 +107,12 @@ Print name + balance after funding
     </tr>
     <tr>
         <td>
-            <code>
-                int[] balances = {1200, 250, 2000, 500, 3200}; <br>
-                <br>
-                String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"}; <br>
-                <br>
-                String ownerName = Oww; <br>
-                double withdrawal = 100;
-            </code>
+            int[] balances = {1200, 250, 2000, 500, 3200}; <br>
+            <br>
+            String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"}; <br>
+            <br>
+            String ownerName = Oww; <br>
+            double withdrawal = 100;
         </td>
     </tr>
     <tr>
@@ -134,6 +125,7 @@ Print name + balance after funding
     </tr>
 </table>
 
+--------------------------------------------------------------------------
 
 ### [Домашнее задание № 3.1](/src/main/java/ua/goit/java/lesson03/task01)
 Добавить метод sing к классу Bird, потом измените основной метод соответственно,
@@ -144,7 +136,6 @@ Print name + balance after funding
  I am singing
  I am Bird
  ```
-
 
 ### [Домашнее задание № 3.2](/src/main/java/ua/goit/java/lesson03/task02)
 Напишите класс с названием Arithmetic с методом add, который принимает целые
@@ -159,7 +150,6 @@ Print name + balance after funding
 int add(Integer a, Integer b)
 boolean check(Integer a, Integer b)
 ```
-
 
 ### [Домашнее задание № 3.3](/src/main/java/ua/goit/java/lesson03/task03)
 Создать следующую структуру классов.
@@ -210,7 +200,6 @@ long secretKey, String email.
 Создайте 5 объектов класса Course. Создайте объекты других классов, используя все конструкторы.
 У вас должно быть 13 объектов в классе Solution.
 
-
 ### [Домашнее задание № 3.4](/src/main/java/ua/goit/java/lesson03/task04)
 Создайте класс User со следующими полями:
 ```
@@ -231,6 +220,7 @@ long secretKey, String email.
  monthIncreaser(int addMonth) - увеличивает monthsOfEmployment на addMonth
 ```
 
+--------------------------------------------------------------------------
 
 ### [Домашнее задание № 4.1](/src/main/java/ua/goit/java/lesson04/task01)
 Создайте следующую структуру:
@@ -257,12 +247,10 @@ abstract int getCommission(int summ)
 double moneyPaidMonthlyForSalary()
 ```
 
-
 ### [Домашнее задание № 4.2](/src/main/java/ua/goit/java/lesson04/task02)
 Создайте следующую структуру: Enum Currency.
 
 Currency - это Enum с двумя значениями: USD, EUR.
-
 
 ### [Домашнее задание № 4.3](/src/main/java/ua/goit/java/lesson04/task03)
 Создайте следующую структуру:
@@ -290,7 +278,6 @@ Currency - это Enum с двумя значениями: USD, EUR.
  - комиссия 3%, если USD и до 1000, 5%, если USD и больше 1000
  - 10%, если EUR и до 1000 и 11%, если EUR и больше 1000
 
-
 ### [Домашнее задание № 4.4](/src/main/java/ua/goit/java/lesson04/task04)
 Создайте следующую структуру:
 Интерфейс BankSystem и его реализацию BankSystemImpl.
@@ -308,7 +295,6 @@ Bank bank
 
 Класс User не имеет собственных методов. Но перегружает метод toString.
 
-
 ### [Домашнее задание № 4.5](/src/main/java/ua/goit/java/lesson04/task05)
 Создайте следующую структуру:
 Класс Main с методом main, где вы должны создать 6 объектов класса User
@@ -323,7 +309,6 @@ void paySalary(User user)
 ```
 и его релизацию.
 
-
 ### [Домашнее задание № 4.6](/src/main/java/ua/goit/java/lesson04/task06)
 You need to following structure: abstarct class Bank and three classes that extends it:
 USBank, EUBank, ChinaBank. Enum Currency. Class User that represents User of our Bank System.
@@ -332,6 +317,7 @@ Interface BankSystem and its implementation BankSystemImpl.
 Create Main class with main method, where you should create 6 Users: 2 of USBank, 2 of EUBank
 and 2 of ChinaBank. Run four different operations with every User’s balance and print its objects to console.
 
+--------------------------------------------------------------------------
 
 ### [Домашнее задание № 5.1](/src/main/java/ua/goit/java/lesson05/task01)
 Создайте часть System, которая может найти комнаты в отелях для бронирования и сохранить их в DataBase.
@@ -357,7 +343,6 @@ String cityName
 ```
 Создайте get-,set-методы и конструктор с аргументами - всеми полями.
 
-
 ### [Домашнее задание № 5.2](/src/main/java/ua/goit/java/lesson05/task02)
 Создайте часть System, которая может найти комнаты в отелях для бронирования и сохранить их в DataBase.
 
@@ -372,7 +357,6 @@ String cityName
 !!! Сначала создайте UML диаграммы, и только потом пишите код. !!!
 
 Перегрузите методы equals и hashCode (2 объекты Room равны, когда поля price, persons и cityName равны).
-
 
 ### [Домашнее задание № 5.3](/src/main/java/ua/goit/java/lesson05/task03)
 Создайте часть System, которая может найти комнаты в отелях для бронирования и сохранить их в DataBase.
@@ -389,7 +373,6 @@ String cityName
 
 Создайте API интерфейс с одним методом
 Room[] findRooms(int price, int persons, String city, String hotel)
-
 
 ### [Домашнее задание № 5.4](/src/main/java/ua/goit/java/lesson05/task04)
 Создайте часть System, которая может найти комнаты в отелях для бронирования и сохранить их в DataBase.
@@ -412,7 +395,6 @@ Room[] findRooms(int price, int persons, String city, String hotel)
 В каждой реализации есть глобальная переменная Room[] rooms, которая должна быть инициализована
 констуктором по умолчанию пятью разными объектами Room.
 
-
 ### [Домашнее задание № 5.5](/src/main/java/ua/goit/java/lesson05/task05)
 Создайте часть System, которая может найти комнаты в отелях для бронирования и сохранить их в DataBase.
 
@@ -434,7 +416,6 @@ boolean delete(Room room)
 Room update(Room room)
 Room findById(long id)
 ```
-
 
 ### [Домашнее задание № 5.6](/src/main/java/ua/goit/java/lesson05/task06)
 Создайте часть System, которая может найти комнаты в отелях для бронирования и сохранить их в DataBase.
@@ -461,7 +442,6 @@ Room[] check(API api1, API api2) -
 Все методы используют доступные методы API для поиска.
 Найденные номера формируют новую DB.
 
-
 ### [Домашнее задание № 5.7](/src/main/java/ua/goit/java/lesson05/task07)
 Создайте часть System, которая может найти комнаты в отелях для бронирования и сохранить их в DataBase.
 
@@ -478,6 +458,7 @@ Room[] check(API api1, API api2) -
 В методе класса Main создайте Controller и сделайте 3 запроса с разными параметрами, чтобы найти номера.
 Также проверьте все методы 3 раза с разными API, чтобы продемонстрировать, как работает программа.
 
+--------------------------------------------------------------------------
 
 ### [Домашнее задание № 6.1](/src/main/java/ua/goit/java/lesson06/task01)
 You need to create two classes ArraysUtils and UserUtils with static and final methods
@@ -501,20 +482,17 @@ int[] reverse(int[] array)
 int[] findEvenElements(int[] array)
 ```
 
-
 ### [Домашнее задание № 6.2](/src/main/java/ua/goit/java/lesson06/task02)
 You need to create two classes ArraysUtils and UserUtils with static and final methods
 and use ArraysUtils methods in HW2 to symplify it.
 
 In HW2 use methods from your ArraysUtils.
 
-
 ### [Домашнее задание № 6.3](/src/main/java/ua/goit/java/lesson06/task03)
 You need to create two classes ArraysUtils and UserUtils with static and final methods
 and use ArraysUtils methods in HW2 to symplify it.
 
 Make sure nobody can inherit your ArraysUtils.
-
 
 ### [Домашнее задание № 6.4](/src/main/java/ua/goit/java/lesson06/task04)
 You need to create two classes ArraysUtils and UserUtils with static and final methods
@@ -529,7 +507,6 @@ int salary
 int balance
 ```
 and constructor with all fields.
-
 
 ### [Домашнее задание № 6.5](/src/main/java/ua/goit/java/lesson06/task05)
 You need to create two classes ArraysUtils and UserUtils with static and final methods
@@ -547,7 +524,6 @@ User[] deleteEmptyUsers(User[] users)
 ```
 Make sure paySalaryToUsers and getUsersId methods can’t be overriden in other classes.
 
-
 ### [Домашнее задание № 6.6](/src/main/java/ua/goit/java/lesson06/task06)
 You need to create two classes ArraysUtils and UserUtils with static and final methods
 and use ArraysUtils methods in HW2 to symplify it.
@@ -555,6 +531,7 @@ and use ArraysUtils methods in HW2 to symplify it.
 Create Main class with main method where you need to create some test users and demonstrate
 how every method from UserUtils work.
 
+--------------------------------------------------------------------------
 
 ### [Домашнее задание № 7.1](/src/main/java/ua/goit/java/lesson07/task01)
 Класс User должен содержать поля:
@@ -576,7 +553,6 @@ how every method from UserUtils work.
  User user
 ```
 
-
 ### [Домашнее задание № 7.2](/src/main/java/ua/goit/java/lesson07/task02)
 В Main создайте 10 заказов с 10 пользователями и добавьте его в List.
 - отсортируйте список за ценой заказа по убыванию
@@ -589,7 +565,6 @@ how every method from UserUtils work.
 - разделите список на 2 списка - заказы в долларах и в гривнах
 - разделите список на столько списков, сколько уникальных городов в User
 
-
 ### [Домашнее задание № 7.3](/src/main/java/ua/goit/java/lesson07/task03)
 Создайте класс Main, где создайте 10 заказов с 10 пользователями и добавьте его в TreeSet.
 Создайте 8 уникальных и 2 дублированых заказа.
@@ -597,10 +572,8 @@ how every method from UserUtils work.
 - выведите заказ с наибольшей ценой, исспользуя только один сет-метод - get
 - удалите заказы, где валюта доллар, используя Iterator
 
-
 ### [Домашнее задание № 7.4](/src/main/java/ua/goit/java/lesson07/task04)
 Все подходящие структуры данных (массивы) для User с Домашней работы в модуле 5 должны быть перенесены.
-
 
 ### [Домашнее задание № 7.5](/src/main/java/ua/goit/java/lesson07/task05)
 Сгенерируйте Integer и String ArrayList и LinkedList с 1000 и 10000 элементами.
@@ -609,3 +582,136 @@ how every method from UserUtils work.
 - set
 - get
 - remove
+
+--------------------------------------------------------------------------
+
+### [Домашнее задание № 8.1](/src/main/java/ua/goit/java/lesson08/task01)
+Создайте универсальный интерфейс AbstractDAO (T) с такими методами:
+
+- List ---- out DB emulator
+- T save(T)
+- void delete(T)
+- void deleteAll(List T)
+- void saveAll(List T)
+- List T getList()
+
+Дополнительно (выполнение по желанию):
+- void daleteById(long id)
+- T get(long id)
+
+### [Домашнее задание № 8.2](/src/main/java/ua/goit/java/lesson08/task02)
+Создайте универсальный интерфейс AbstractDAO (T) с следующими методами:
+- List - out DB emulator
+- void deleteByld(long id)
+- T get(long id)
+
+### [Домашнее задание № 8.3](/src/main/java/ua/goit/java/lesson08/task03)
+Сделайте реализацию AbstractDAOImpl
+
+### [Домашнее задание № 8.4](/src/main/java/ua/goit/java/lesson08/task04)
+Создайте UserDAO который разширяет AbstractDAOImpl и имеет те же самые методы
+
+- User class:
+- long id
+- String name
+
+Пример:
+```
+UserDAO extends .. {
+     User save(User user) {
+          save(user);
+          return user;
+     }
+
+}
+```
+
+--------------------------------------------------------------------------
+
+### [Домашнее задание № 9.1](/src/main/java/ua/goit/java/lesson09/task01)
+Используйте структуры с HW модуля 7 (User и Order) и выполните задания, используя Java 8 instruments
+
+- отсортируйте список за ценой заказа по убыванию
+- отсортируйте список за ценой заказа по возрастанию и за городом пользователя
+- отсортируйте список за наименованием товара, идентификатором заказа, и городом пользователя
+
+- удалите дублированные данные со списка
+- удалите объекты, где цена меньше 1500
+- разделите список на 2 списка - заказы в долларах и в гривнах
+- разделите список на столько списков, сколько уникальных городов в User
+
+- проверьте, содержит ли сет заказ, где фамилия пользователя - “Petrov”
+- удалите заказы в USD
+
+Ограничения:
+- нельзя использовать итератор
+- нельзя использовать циклы
+
+Определите каждую подзадачу в отдельный метод.
+Создайте класс Main и протестируйте каждый метод на тестовых данных.
+
+--------------------------------------------------------------------------
+
+### [Домашнее задание № 10.1](/src/main/java/ua/goit/java/lesson10/task01)
+Создайте класс с main(), который закидывает (throws) объект класса Exception внутрь try-блока.
+Задайте конструктору исключения (Exception) аргумент типа String.
+Поймайте (catch) исключение внутри catch-блока и выведите String argument.
+Добавьте finally-блок и выведите сообщение в доказательство того, что он вызывался.
+
+### [Домашнее задание № 10.2](/src/main/java/ua/goit/java/lesson10/task02)
+Создайте свой собственный класс исключений, используя ключевое слово extends.
+Напишите конструктор для этого класса, который получает аргумент типа String и
+хранит его внутри объекта как ссылку (reference) на String.
+Написать метод, который выводит хранимую строку.
+Создать try-catch-блоки, чтобы поупражняться на новом исключении.
+
+### [Домашнее задание № 10.3](/src/main/java/ua/goit/java/lesson10/task03)
+Определите ссылку (reference) на объект и инициализируйте ее как null.
+Попробуйте вызвать метод через эту ссылку. Потом оберните этот код в try-catch-блок,
+чтобы поймать исключение.
+
+### [Домашнее задание № 10.4](/src/main/java/ua/goit/java/lesson10/task04)
+Создайте класс с двумя методами f() и g().
+В g() киньте (throw) исключение нового типа, который вы определили.
+В f() вызовите g(), поймайте его исключение и в блоке catch киньте другое исключение
+(другого типа, который вы определили). Протестируйте свой код в main().
+
+### [Домашнее задание № 10.5](/src/main/java/ua/goit/java/lesson10/task05)
+Создайте три новых типа исключений. Напишите класс с методом, который будет
+кидать все три из них. В main() вызовите этот метод, но используйте только один
+catch-блок который будет ловить все три типа исключений.
+
+--------------------------------------------------------------------------
+
+### [Домашнее задание № 11.1](/src/main/java/ua/goit/java/lesson11/task01)
+Создать метод, который заменяет слова в файле (File)
+и возвращает строку (String) с заменёнными значениями.
+```
+String replacer(Map map)
+```
+
+### [Домашнее задание № 11.2](/src/main/java/ua/goit/java/lesson11/task02)
+Создать метод, который заменяет слова в файле (File)
+и переписать его содержание с новыми значениями.
+```
+File fileContentReplacer(Map map)
+```
+
+### [Домашнее задание № 11.3](/src/main/java/ua/goit/java/lesson11/task03)
+Создать метод, который заменяет слова в файле (File),
+и вывести результат в существующий контент файла.
+```
+File fileContentMerger(Map<String, String> map)
+```
+
+### [Домашнее задание № 11.4](/src/main/java/ua/goit/java/lesson11/task04)
+Проверить, содержит ли файл конкретное слово. Вывести 0, если нет.
+Вывести номер n, который эквивалентен числу появлений этого слова в файле.
+```
+int checkWord(String word)
+```
+Написать это задание с обычным try и try-with-resources(две версии).
+
+--------------------------------------------------------------------------
+
+[**Yurii Salimov**](https://www.linkedin.com/in/yurii-salimov)
