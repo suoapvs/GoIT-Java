@@ -3,12 +3,12 @@ package ua.goit.java.lesson04.task06;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class EUBank extends Bank {
+public final class EUBank extends Bank {
 
     public EUBank(
-            long id, String bankCountry, Currency currency,
-            int numberOfEmployees, double avrSalaryOfEmployee,
-            long rating, long totalCapital) {
+            final long id, final String bankCountry, final Currency currency,
+            final int numberOfEmployees, final double avrSalaryOfEmployee,
+            final long rating, final long totalCapital) {
         super(
                 id, bankCountry, currency, numberOfEmployees,
                 avrSalaryOfEmployee, rating, totalCapital
@@ -55,7 +55,7 @@ public class EUBank extends Bank {
     }
 
     @Override
-    public int getCommission(int summ) {
+    public int getCommission(final int summ) {
         int commission;
         final Currency currency = getCurrency();
         if (currency.equals(Currency.USD)) {

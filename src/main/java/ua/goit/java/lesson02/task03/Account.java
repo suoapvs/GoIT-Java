@@ -3,7 +3,7 @@ package ua.goit.java.lesson02.task03;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class Account {
+public final class Account {
 
     private final static int COMMISSION = 5;
 
@@ -37,7 +37,7 @@ public class Account {
         return this.money;
     }
 
-    private static double calcCommission(final double withdrawMoney) {
+    private double calcCommission(final double withdrawMoney) {
         return withdrawMoney * COMMISSION / 100;
     }
 

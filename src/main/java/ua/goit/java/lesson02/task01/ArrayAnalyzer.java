@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class ArrayAnalyzer implements Analyzer {
+public final class ArrayAnalyzer implements Analyzer {
 
     @Override
     public int sum(final int[] array) {
@@ -79,7 +79,6 @@ public class ArrayAnalyzer implements Analyzer {
         return result;
     }
 
-    // modulus of first and last element
     @Override
     public int modulus(final int[] array) {
         return (array[0] % array[array.length - 1]);

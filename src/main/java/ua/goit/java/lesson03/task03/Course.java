@@ -12,12 +12,12 @@ public class Course {
     private int hoursDuration;
     private String teacherName;
 
-    public Course(Date startDate, String name) {
+    public Course(final Date startDate, final String name) {
         this.startDate = startDate;
         this.name = name;
     }
 
-    public Course(String name, int hoursDuration, String teacherName) {
+    public Course(final String name, final int hoursDuration, final String teacherName) {
         this(new Date(), name);
         this.hoursDuration = hoursDuration;
         this.teacherName = teacherName;

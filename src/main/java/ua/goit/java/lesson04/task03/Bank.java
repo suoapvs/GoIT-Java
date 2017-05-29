@@ -14,9 +14,9 @@ public abstract class Bank {
     private long totalCapital;
 
     public Bank(
-            long id, String bankCountry, Currency currency,
-            int numberOfEmployees, double avrSalaryOfEmployee,
-            long rating, long totalCapital
+            final long id, final String bankCountry, final Currency currency,
+            final int numberOfEmployees, final double avrSalaryOfEmployee,
+            final long rating, final long totalCapital
     ) {
         this.id = id;
         this.bankCountry = bankCountry;

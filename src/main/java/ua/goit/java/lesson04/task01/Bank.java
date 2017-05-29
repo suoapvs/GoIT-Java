@@ -14,9 +14,9 @@ public abstract class Bank {
     private long totalCapital;
 
     public Bank(
-            long id, String bankCountry, Currency currency,
-            int numberOfEmployees, double avrSalaryOfEmployee,
-            long rating, long totalCapital
+            final long id, final String bankCountry, final Currency currency,
+            final int numberOfEmployees, final double avrSalaryOfEmployee,
+            final long rating, final long totalCapital
     ) {
         this.id = id;
         this.bankCountry = bankCountry;
@@ -39,7 +39,7 @@ public abstract class Bank {
         return bankCountry;
     }
 
-    public void setBankCountry(String bankCountry) {
+    public void setBankCountry(final String bankCountry) {
         this.bankCountry = bankCountry;
     }
 
@@ -47,7 +47,7 @@ public abstract class Bank {
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
+    public void setCurrency(final Currency currency) {
         this.currency = currency;
     }
 
@@ -55,7 +55,7 @@ public abstract class Bank {
         return numberOfEmployees;
     }
 
-    public void setNumberOfEmployees(int numberOfEmployees) {
+    public void setNumberOfEmployees(final int numberOfEmployees) {
         this.numberOfEmployees = numberOfEmployees;
     }
 
@@ -63,7 +63,7 @@ public abstract class Bank {
         return avrSalaryOfEmployee;
     }
 
-    public void setAvrSalaryOfEmployee(double avrSalaryOfEmployee) {
+    public void setAvrSalaryOfEmployee(final double avrSalaryOfEmployee) {
         this.avrSalaryOfEmployee = avrSalaryOfEmployee;
     }
 
@@ -71,7 +71,7 @@ public abstract class Bank {
         return rating;
     }
 
-    public void setRating(long rating) {
+    public void setRating(final long rating) {
         this.rating = rating;
     }
 
@@ -79,7 +79,7 @@ public abstract class Bank {
         return totalCapital;
     }
 
-    public void setTotalCapital(long totalCapital) {
+    public void setTotalCapital(final long totalCapital) {
         this.totalCapital = totalCapital;
     }
 
@@ -89,7 +89,7 @@ public abstract class Bank {
 
     public abstract int getMonthlyRate();
 
-    public abstract int getCommission(int summ);
+    public abstract int getCommission(final int summ);
 
     public abstract double moneyPaidMonthlyForSalary();
 }

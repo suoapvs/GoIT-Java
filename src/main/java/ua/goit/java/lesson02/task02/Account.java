@@ -3,11 +3,9 @@ package ua.goit.java.lesson02.task02;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class Account {
+public final class Account {
 
     private final static int COMMISSION = 5;
-
-    private final Object lock = new Object();
 
     private double money;
 
@@ -16,7 +14,7 @@ public class Account {
     }
 
     @Override
-    public boolean equals(Object object) {
+    public boolean equals(final Object object) {
         if (this == object) {
             return true;
         }
@@ -37,13 +35,11 @@ public class Account {
     public synchronized String withdraw(final double money) {
         final double commission = calcCommission(money);
         final double withdraw = money + commission;
-        synchronized (this.lock) {
-            final boolean result = withdrawWithCommission(withdraw);
-            if (result) {
-                return "OK " + commission + " " + this.money;
-            } else {
-                return "NO";
-            }
+        final boolean result = withdrawWithCommission(withdraw);
+        if (result) {
+            return "OK " + commission + " " + this.money;
+        } else {
+            return "NO";
         }
     }
 
@@ -51,7 +47,7 @@ public class Account {
         return this.money;
     }
 
-    private static double calcCommission(final double withdrawMoney) {
+    private double calcCommission(final double withdrawMoney) {
         return withdrawMoney * COMMISSION / 100;
     }
 

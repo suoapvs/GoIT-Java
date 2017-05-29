@@ -3,7 +3,7 @@ package ua.goit.java.lesson03.task04;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class User {
+public final class User {
 
     private String name;
     private int balance;
@@ -13,8 +13,8 @@ public class User {
     private String currency;
 
     public User(
-            String name, int balance, int monthsOfEmployment,
-            String companyName, int salary, String currency
+            final String name, final int balance, final int monthsOfEmployment,
+            final String companyName, final int salary, final String currency
     ) {
         this.name = name;
         this.balance = balance;
@@ -40,7 +40,7 @@ public class User {
         return this.companyName.length();
     }
 
-    public void monthIncreaser(int addMonth) {
+    public void monthIncreaser(final int addMonth) {
         this.monthsOfEmployment += addMonth;
     }
 
@@ -48,7 +48,7 @@ public class User {
         return this.name;
     }
 
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -56,7 +56,7 @@ public class User {
         return this.balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(final int balance) {
         this.balance = balance;
     }
 
@@ -64,7 +64,7 @@ public class User {
         return this.monthsOfEmployment;
     }
 
-    public void setMonthsOfEmployment(int monthsOfEmployment) {
+    public void setMonthsOfEmployment(final int monthsOfEmployment) {
         this.monthsOfEmployment = monthsOfEmployment;
     }
 
@@ -72,7 +72,7 @@ public class User {
         return this.companyName;
     }
 
-    public void setCompanyName(String companyName) {
+    public void setCompanyName(final String companyName) {
         this.companyName = companyName;
     }
 
@@ -80,7 +80,7 @@ public class User {
         return this.salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(final int salary) {
         this.salary = salary;
     }
 
@@ -88,7 +88,7 @@ public class User {
         return this.currency;
     }
 
-    public void setCurrency(String currency) {
+    public void setCurrency(final String currency) {
         this.currency = currency;
     }
 }

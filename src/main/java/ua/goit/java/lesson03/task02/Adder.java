@@ -5,7 +5,7 @@ package ua.goit.java.lesson03.task02;
  */
 public class Adder extends Arithmetic {
 
-    public boolean check(Integer a, Integer b) {
+    public boolean check(final Integer a, final Integer b) {
         return (a >= b);
     }
 }

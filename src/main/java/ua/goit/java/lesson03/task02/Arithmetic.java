@@ -5,7 +5,7 @@ package ua.goit.java.lesson03.task02;
  */
 public class Arithmetic {
 
-    public int add(Integer a, Integer b) {
+    public int add(final Integer a, final Integer b) {
         return (a + b);
     }
 }

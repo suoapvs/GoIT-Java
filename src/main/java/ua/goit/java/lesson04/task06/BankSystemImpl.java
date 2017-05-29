@@ -3,7 +3,7 @@ package ua.goit.java.lesson04.task06;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class BankSystemImpl implements BankSystem {
+public final class BankSystemImpl implements BankSystem {
 
     @Override
     public void withdrawOfUser(final User user, final int amount) {
@@ -11,12 +11,12 @@ public class BankSystemImpl implements BankSystem {
     }
 
     @Override
-    public void fundUser(User user, int amount) {
+    public void fundUser(final User user, final int amount) {
         fund(user, amount);
     }
 
     @Override
-    public void transferMoney(User fromUser, User toUser, int amount) {
+    public void transferMoney(final User fromUser, final User toUser, final int amount) {
         boolean result = withdraw(fromUser, amount);
         if (result) {
             fund(toUser, amount);
@@ -24,7 +24,7 @@ public class BankSystemImpl implements BankSystem {
     }
 
     @Override
-    public void paySalary(User user) {
+    public void paySalary(final User user) {
         final int salary = user.getSalary() * user.getMonthsOfEmployment();
         fund(user, salary);
     }
@@ -41,7 +41,7 @@ public class BankSystemImpl implements BankSystem {
         return result;
     }
 
-    private static boolean fund(User user, int amount) {
+    private static boolean fund(final User user, final int amount) {
         final Bank bank = user.getBank();
         final int limitOfFunding = bank.getLimitOfFunding();
         final boolean result = (amount <= limitOfFunding);

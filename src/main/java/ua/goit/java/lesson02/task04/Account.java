@@ -56,7 +56,7 @@ public class Account {
         return this.money;
     }
 
-    private static double calcCommission(final double withdrawMoney) {
+    private double calcCommission(final double withdrawMoney) {
         return withdrawMoney * COMMISSION / 100;
     }
 

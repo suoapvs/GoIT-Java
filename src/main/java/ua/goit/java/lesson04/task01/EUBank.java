@@ -6,9 +6,9 @@ package ua.goit.java.lesson04.task01;
 public class EUBank extends Bank {
 
     public EUBank(
-            long id, String bankCountry, Currency currency,
-            int numberOfEmployees, double avrSalaryOfEmployee,
-            long rating, long totalCapital) {
+            final long id, final String bankCountry, final Currency currency,
+            final int numberOfEmployees, final double avrSalaryOfEmployee,
+            final long rating, final long totalCapital) {
         super(
                 id, bankCountry, currency, numberOfEmployees,
                 avrSalaryOfEmployee, rating, totalCapital

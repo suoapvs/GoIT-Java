@@ -6,9 +6,9 @@ package ua.goit.java.lesson04.task01;
 public class USBank extends Bank {
 
     public USBank(
-            long id, String bankCountry, Currency currency,
-            int numberOfEmployees, double avrSalaryOfEmployee,
-            long rating, long totalCapital) {
+            final long id, final String bankCountry, final Currency currency,
+            final int numberOfEmployees, final double avrSalaryOfEmployee,
+            final long rating, final long totalCapital) {
         super(
                 id, bankCountry, currency, numberOfEmployees,
                 avrSalaryOfEmployee, rating, totalCapital
@@ -31,7 +31,7 @@ public class USBank extends Bank {
     }
 
     @Override
-    public int getCommission(int summ) {
+    public int getCommission(final int summ) {
         return 0;
     }
 
