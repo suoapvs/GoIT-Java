@@ -7,9 +7,7 @@ import java.util.Date;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class GoogleAPI extends AbstractAPI implements API {
-
-    private final Room[] rooms = new Room[5];
+public final class GoogleAPI extends AbstractAPI implements API {
 
     public GoogleAPI() {
         this.rooms[0] = new Room(21, 2000, 1, new Date(), "Nowyi", "Kyiv");

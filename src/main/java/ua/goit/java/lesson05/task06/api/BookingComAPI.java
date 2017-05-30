@@ -7,9 +7,7 @@ import java.util.Date;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class BookingComAPI extends AbstractAPI implements API {
-
-    private final Room[] rooms = new Room[5];
+public final class BookingComAPI extends AbstractAPI implements API {
 
     public BookingComAPI() {
         this.rooms[0] = new Room(11, 2500, 1, new Date(), "Nowyi", "Kyiv");

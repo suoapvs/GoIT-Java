@@ -11,7 +11,7 @@ import ua.goit.java.lesson05.task07.entity.Room;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class Controller {
+public final class Controller {
 
     private final API apis[] = new API[3];
 
@@ -23,7 +23,10 @@ public class Controller {
         this.apis[2] = new TripAdvisorAPI();
     }
 
-    public Room[] requestRooms(int price, int persons, String city, String hotel) {
+    public Room[] requestRooms(
+            final int price, final int persons,
+            final String city, final String hotel
+    ) {
         Room[] rooms = new Room[0];
         for (API api : this.apis) {
             final Room[] findRooms = api.findRooms(price, persons, city, hotel);
@@ -38,7 +41,7 @@ public class Controller {
         return rooms;
     }
 
-    public Room[] check(API api1, API api2) {
+    public Room[] check(final API api1, final API api2) {
         Room[] rooms = new Room[0];
         for (Room room1 : api1.getAll()) {
             for (Room room2 : api2.getAll()) {

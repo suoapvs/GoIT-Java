@@ -5,10 +5,13 @@ import ua.goit.java.lesson05.task03.entity.Room;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class BookingComAPI implements API {
+public final class BookingComAPI implements API {
 
     @Override
-    public Room[] findRooms(int price, int persons, String city, String hotel) {
+    public Room[] findRooms(
+            final int price, final int persons,
+            final String city, final String hotel
+    ) {
         return new Room[0];
     }
 }

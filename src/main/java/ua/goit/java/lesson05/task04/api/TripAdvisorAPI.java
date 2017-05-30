@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class TripAdvisorAPI extends AbstractAPI implements API {
+public final class TripAdvisorAPI extends AbstractAPI implements API {
 
     public TripAdvisorAPI() {
         this.rooms[0] = new Room(31, 2500, 1, new Date(), "Privet", "Brovary");

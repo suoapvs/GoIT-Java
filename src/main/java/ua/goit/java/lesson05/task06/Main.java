@@ -10,7 +10,7 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) {
-        final Room room = new Room(1, 1000, 1, new Date(), "Hotel", "Kyiv");
+        final Room room = new Room(31, 2500, 1, new Date(), "Privet", "Brovary");
         System.out.println(room);
     }
 }

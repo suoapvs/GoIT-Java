@@ -5,7 +5,7 @@ import ua.goit.java.lesson05.task07.entity.Room;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class DAOImpl implements DAO {
+public final class DAOImpl implements DAO {
 
     private final static int DEFAULT_CAPACITY = 10;
 
@@ -14,23 +14,15 @@ public class DAOImpl implements DAO {
     private int count = 0;
 
     @Override
-    public Room[] save(Room room) {
+    public Room[] save(final Room room) {
         System.out.println("Save " + room);
         checkCapacity();
         this.rooms[count++] = room;
         return this.rooms;
     }
 
-    private void checkCapacity() {
-        if (this.count + 1 >= this.rooms.length) {
-            final Room[] temp = this.rooms;
-            this.rooms = new Room[temp.length * 3 / 2 + 1];
-            System.arraycopy(temp, 0, this.rooms, 0, temp.length);
-        }
-    }
-
     @Override
-    public boolean delete(Room room) {
+    public boolean delete(final Room room) {
         System.out.println("Delete " + room);
         boolean result = false;
         for (int i = 0; i < this.count; i++) {
@@ -45,7 +37,7 @@ public class DAOImpl implements DAO {
     }
 
     @Override
-    public Room update(Room room) {
+    public Room update(final Room room) {
         System.out.println("Update " + room);
         Room savingRoom = null;
         for (int i = 0; i < this.count; i++) {
@@ -57,7 +49,7 @@ public class DAOImpl implements DAO {
     }
 
     @Override
-    public Room findById(Room room) {
+    public Room findById(final Room room) {
         System.out.println("Find By Id " + room);
         Room result = null;
         for (Room _room : this.rooms) {
@@ -67,5 +59,13 @@ public class DAOImpl implements DAO {
             }
         }
         return result;
+    }
+
+    private void checkCapacity() {
+        if (this.count + 1 >= this.rooms.length) {
+            final Room[] temp = this.rooms;
+            this.rooms = new Room[temp.length * 3 / 2 + 1];
+            System.arraycopy(temp, 0, this.rooms, 0, temp.length);
+        }
     }
 }
