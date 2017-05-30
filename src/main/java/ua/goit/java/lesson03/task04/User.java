@@ -5,12 +5,12 @@ package ua.goit.java.lesson03.task04;
  */
 public final class User {
 
-    private String name;
+    private final String name;
+    private final String companyName;
+    private final int salary;
+    private final String currency;
     private int balance;
     private int monthsOfEmployment;
-    private String companyName;
-    private int salary;
-    private String currency;
 
     public User(
             final String name, final int balance, final int monthsOfEmployment,
@@ -48,10 +48,6 @@ public final class User {
         return this.name;
     }
 
-    public void setName(final String name) {
-        this.name = name;
-    }
-
     public int getBalance() {
         return this.balance;
     }
@@ -72,23 +68,11 @@ public final class User {
         return this.companyName;
     }
 
-    public void setCompanyName(final String companyName) {
-        this.companyName = companyName;
-    }
-
     public int getSalary() {
         return this.salary;
     }
 
-    public void setSalary(final int salary) {
-        this.salary = salary;
-    }
-
     public String getCurrency() {
         return this.currency;
-    }
-
-    public void setCurrency(final String currency) {
-        this.currency = currency;
     }
 }

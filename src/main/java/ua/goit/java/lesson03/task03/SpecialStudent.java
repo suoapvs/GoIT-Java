@@ -5,35 +5,35 @@ package ua.goit.java.lesson03.task03;
  */
 public class SpecialStudent extends CollegeStudent {
 
-    private long secretKey;
-    private String email;
+    private final long secretKey;
+    private final String email;
 
     public SpecialStudent(final String firstName, final String lastName, final int group) {
-        super(firstName, lastName, group);
+        this(firstName, lastName, group, new Course[0], 0, "");
     }
 
     public SpecialStudent(final String lastName, final Course[] coursesTaken) {
-        super(lastName, coursesTaken);
+        this("", lastName, 0, coursesTaken, 0, "");
     }
 
     public SpecialStudent(final long secretKey) {
-        this(null, null);
+        this("", "", 0, new Course[0], secretKey, "");
+    }
+
+    protected SpecialStudent(
+            final String firstName, final String lastName, final int group,
+            final Course[] coursesTaken, final long secretKey, final String email
+    ) {
+        super(firstName, lastName, group, 0, coursesTaken, "", 0, 0);
         this.secretKey = secretKey;
+        this.email = email;
     }
 
     public long getSecretKey() {
         return this.secretKey;
     }
 
-    public void setSecretKey(final long secretKey) {
-        this.secretKey = secretKey;
-    }
-
     public String getEmail() {
         return this.email;
-    }
-
-    public void setEmail(final String email) {
-        this.email = email;
     }
 }

@@ -5,20 +5,27 @@ import java.util.Date;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class Course {
+public final class Course {
 
-    private Date startDate;
-    private String name;
-    private int hoursDuration;
-    private String teacherName;
+    private final Date startDate;
+    private final String name;
+    private final int hoursDuration;
+    private final String teacherName;
 
     public Course(final Date startDate, final String name) {
-        this.startDate = startDate;
-        this.name = name;
+        this(name, 0, "", startDate);
     }
 
     public Course(final String name, final int hoursDuration, final String teacherName) {
-        this(new Date(), name);
+        this(name, hoursDuration, teacherName, new Date());
+    }
+
+    public Course(
+            final String name, final int hoursDuration,
+            final String teacherName, final Date startDate
+    ) {
+        this.startDate = startDate;
+        this.name = name;
         this.hoursDuration = hoursDuration;
         this.teacherName = teacherName;
     }
@@ -27,31 +34,15 @@ public class Course {
         return this.startDate;
     }
 
-    public void setStartDate(Date startDate) {
-        this.startDate = startDate;
-    }
-
     public String getName() {
         return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getHoursDuration() {
         return this.hoursDuration;
     }
 
-    public void setHoursDuration(int hoursDuration) {
-        this.hoursDuration = hoursDuration;
-    }
-
     public String getTeacherName() {
         return this.teacherName;
-    }
-
-    public void setTeacherName(String teacherName) {
-        this.teacherName = teacherName;
     }
 }
