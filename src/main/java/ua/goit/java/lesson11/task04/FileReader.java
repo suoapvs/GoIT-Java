@@ -7,7 +7,7 @@ import java.io.RandomAccessFile;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class FileReader {
+public final class FileReader {
 
     private final File file;
 

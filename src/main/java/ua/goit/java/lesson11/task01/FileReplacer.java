@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class FileReplacer {
+public final class FileReplacer {
 
     private final File file;
 
@@ -36,7 +36,7 @@ public class FileReplacer {
         return result;
     }
 
-    private static String replaceAll(final String text, final Map<String, String> map) {
+    private String replaceAll(final String text, final Map<String, String> map) {
         String result = text;
         for (Map.Entry<String, String> entry : map.entrySet()) {
             String regex = entry.getKey();
