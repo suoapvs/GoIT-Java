@@ -3,7 +3,7 @@ package ua.goit.java.lesson02.task04;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class Account {
+public final class Account {
 
     private final static int COMMISSION = 5;
 

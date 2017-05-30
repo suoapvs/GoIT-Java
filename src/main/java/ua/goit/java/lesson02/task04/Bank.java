@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class Bank {
+public final class Bank {
 
     private final Map<String, Account> accounts = new HashMap<>();
 
