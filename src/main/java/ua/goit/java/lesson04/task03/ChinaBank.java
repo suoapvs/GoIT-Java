@@ -9,6 +9,7 @@ public final class ChinaBank extends Bank {
     private static final int MAX_USD_COMMISSION = 5;
     private static final int MIN_EUR_COMMISSION = 10;
     private static final int MAX_EUR_COMMISSION = 11;
+    private static final int LIMIT_COMMISSION = 1000;
 
     private final static int USD_LIMIT_WITHDRAWAL = 100;
     private final static int EUR_LIMIT_WITHDRAWAL = 150;
@@ -30,11 +31,11 @@ public final class ChinaBank extends Bank {
     }
 
     protected int getUSDCommission(final int summ) {
-        return (summ < 1000) ? MIN_USD_COMMISSION : MAX_USD_COMMISSION;
+        return (summ < LIMIT_COMMISSION) ? MIN_USD_COMMISSION : MAX_USD_COMMISSION;
     }
 
     protected int getEURCommission(final int summ) {
-        return (summ < 1000) ? MIN_EUR_COMMISSION : MAX_EUR_COMMISSION;
+        return (summ < LIMIT_COMMISSION) ? MIN_EUR_COMMISSION : MAX_EUR_COMMISSION;
     }
 
     protected int getUSDLimitOfWithdrawal() {
