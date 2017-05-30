@@ -3,15 +3,18 @@ package ua.goit.java.lesson09.task01;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class User {
+public final class User {
 
-    private long id;
-    private String firstName;
-    private String lastName;
-    private String city;
-    private int balance;
+    private final long id;
+    private final String firstName;
+    private final String lastName;
+    private final String city;
+    private final int balance;
 
-    public User(long id, String firstName, String lastName, String city, int balance) {
+    public User(
+            final long id, final String firstName, final String lastName,
+            final String city, final int balance
+    ) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -34,39 +37,19 @@ public class User {
         return this.id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getFirstName() {
         return this.firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 
     public String getLastName() {
         return this.lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getCity() {
         return this.city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public int getBalance() {
         return this.balance;
-    }
-
-    public void setBalance(int balance) {
-        this.balance = balance;
     }
 }

@@ -3,18 +3,18 @@ package ua.goit.java.lesson09.task01;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class Order {
+public final class Order {
 
-    private long id;
-    private int price;
-    private Currency currency;
-    private String itemName;
-    private String shopIdentificator;
-    private User user;
+    private final long id;
+    private final int price;
+    private final Currency currency;
+    private final String itemName;
+    private final String shopIdentificator;
+    private final User user;
 
     public Order(
-            long id, int price, Currency currency, String itemName,
-            String shopIdentificator, User user
+            final long id, final int price, final Currency currency, final String itemName,
+            final String shopIdentificator, final User user
     ) {
         this.id = id;
         this.price = price;
@@ -40,47 +40,23 @@ public class Order {
         return this.id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public int getPrice() {
         return this.price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public Currency getCurrency() {
         return this.currency;
     }
 
-    public void setCurrency(Currency currency) {
-        this.currency = currency;
-    }
-
     public String getItemName() {
         return this.itemName;
-    }
-
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
     }
 
     public String getShopIdentificator() {
         return this.shopIdentificator;
     }
 
-    public void setShopIdentificator(String shopIdentificator) {
-        this.shopIdentificator = shopIdentificator;
-    }
-
     public User getUser() {
         return this.user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }
