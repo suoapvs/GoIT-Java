@@ -3,7 +3,7 @@ package ua.goit.java.lesson10.task05;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class MyClass {
+public final class MyClass {
 
     public void throwsRandomException() throws FirstException, SecondException, ThirdException {
         switch ((int) (System.nanoTime() % 3)) {

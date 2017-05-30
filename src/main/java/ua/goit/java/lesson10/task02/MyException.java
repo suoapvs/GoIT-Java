@@ -3,7 +3,7 @@ package ua.goit.java.lesson10.task02;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class MyException extends Exception {
+public final class MyException extends Exception {
 
     private final String message;
 
