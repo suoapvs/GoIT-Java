@@ -3,76 +3,61 @@ package ua.goit.java.lesson04.task05;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class ChinaBank extends Bank {
+public final class ChinaBank extends Bank {
+
+    private static final int MIN_USD_COMMISSION = 3;
+    private static final int MAX_USD_COMMISSION = 5;
+    private static final int MIN_EUR_COMMISSION = 10;
+    private static final int MAX_EUR_COMMISSION = 11;
+
+    private final static int USD_LIMIT_WITHDRAWAL = 100;
+    private final static int EUR_LIMIT_WITHDRAWAL = 150;
+
+    private final static int USD_LIMIT_FUNDING = 5000;
+    private final static int EUR_LIMIT_FUNDING = 10000;
+
+    private final static int USD_MONTHLY_RATE = 1;
+    private final static int EUR_MONTHLY_RATE = 0;
 
     public ChinaBank(
-            long id, String bankCountry, Currency currency,
-            int numberOfEmployees, double avrSalaryOfEmployee,
-            long rating, long totalCapital) {
+            final long id, final String bankCountry, final Currency currency,
+            final int numberOfEmployees, final double avrSalaryOfEmployee,
+            final long rating, final long totalCapital) {
         super(
                 id, bankCountry, currency, numberOfEmployees,
                 avrSalaryOfEmployee, rating, totalCapital
         );
     }
 
-    @Override
-    public int getLimitOfWithdrawal() {
-        int limit;
-        final Currency currency = getCurrency();
-        if (currency.equals(Currency.USD)) {
-            limit = 100;
-        } else if (currency.equals(Currency.EUR)) {
-            limit = 150;
-        } else {
-            limit = 0;
-        }
-        return limit;
+    protected int getUSDCommission(final int summ) {
+        return (summ < 1000) ? MIN_USD_COMMISSION : MAX_USD_COMMISSION;
     }
 
-    @Override
-    public int getLimitOfFunding() {
-        int limit;
-        final Currency currency = getCurrency();
-        if (currency.equals(Currency.EUR)) {
-            limit = 5000;
-        } else if (currency.equals(Currency.USD)) {
-            limit = 10000;
-        } else {
-            limit = 0;
-        }
-        return limit;
+    protected int getEURCommission(final int summ) {
+        return (summ < 1000) ? MIN_EUR_COMMISSION : MAX_EUR_COMMISSION;
     }
 
-    @Override
-    public int getMonthlyRate() {
-        int rate;
-        if (getCurrency().equals(Currency.USD)) {
-            rate = 1;
-        } else {
-            rate = 0;
-        }
-        return rate;
+    protected int getUSDLimitOfWithdrawal() {
+        return USD_LIMIT_WITHDRAWAL;
     }
 
-    @Override
-    public int getCommission(int summ) {
-        int commission;
-        final Currency currency = getCurrency();
-        if (currency.equals(Currency.USD)) {
-            if (summ < 1000) {
-                commission = 3;
-            } else {
-                commission = 5;
-            }
-        } else if (currency.equals(Currency.EUR)) {
-            if (summ < 1000) {
-                commission = 10;
-            } else {
-                commission = 11;
-            }
-        } else {
-            commission = 0;
-        }
-        return commission;
+    protected int getEURLimitOfWithdrawal() {
+        return EUR_LIMIT_WITHDRAWAL;
+    }
+
+    protected int getUSDLimitOfFunding() {
+        return USD_LIMIT_FUNDING;
+    }
+
+    protected int getEURLimitOfFunding() {
+        return EUR_LIMIT_FUNDING;
+    }
+
+    protected int getUSDMonthlyRate() {
+        return USD_MONTHLY_RATE;
+    }
+
+    protected int getEURMonthlyRate() {
+        return EUR_MONTHLY_RATE;
     }
 }

@@ -3,20 +3,20 @@ package ua.goit.java.lesson04.task04;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class User {
+public final class User {
 
-    private long id;
-    private String name;
-    private double balance;
-    private int monthsOfEmployment;
-    private String companyName;
-    private int salary;
-    private Bank bank;
+    private final long id;
+    private final String name;
+    private final double balance;
+    private final int monthsOfEmployment;
+    private final String companyName;
+    private final int salary;
+    private final Bank bank;
 
     public User(
-            long id, String name, double balance,
-            int monthsOfEmployment, String companyName,
-            int salary, Bank bank
+            final long id, final String name, final double balance,
+            final int monthsOfEmployment, final String companyName,
+            final int salary, final Bank bank
     ) {
         this.id = id;
         this.name = name;

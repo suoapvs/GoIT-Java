@@ -3,7 +3,7 @@ package ua.goit.java.lesson04.task01;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class USBank extends Bank {
+public final class USBank extends Bank {
 
     public USBank(
             final long id, final String bankCountry, final Currency currency,

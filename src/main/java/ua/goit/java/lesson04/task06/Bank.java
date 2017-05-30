@@ -5,18 +5,18 @@ package ua.goit.java.lesson04.task06;
  */
 public abstract class Bank {
 
-    private long id;
-    private String bankCountry;
-    private Currency currency;
-    private int numberOfEmployees;
-    private double avrSalaryOfEmployee;
-    private long rating;
-    private long totalCapital;
+    private final long id;
+    private final String bankCountry;
+    private final Currency currency;
+    private final int numberOfEmployees;
+    private final double avrSalaryOfEmployee;
+    private final long rating;
+    private final long totalCapital;
 
     public Bank(
-            long id, String bankCountry, Currency currency,
-            int numberOfEmployees, double avrSalaryOfEmployee,
-            long rating, long totalCapital
+            final long id, final String bankCountry, final Currency currency,
+            final int numberOfEmployees, final double avrSalaryOfEmployee,
+            final long rating, final long totalCapital
     ) {
         this.id = id;
         this.bankCountry = bankCountry;
@@ -31,67 +31,99 @@ public abstract class Bank {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getBankCountry() {
         return bankCountry;
-    }
-
-    public void setBankCountry(String bankCountry) {
-        this.bankCountry = bankCountry;
     }
 
     public Currency getCurrency() {
         return currency;
     }
 
-    public void setCurrency(Currency currency) {
-        this.currency = currency;
-    }
-
     public int getNumberOfEmployees() {
         return numberOfEmployees;
-    }
-
-    public void setNumberOfEmployees(int numberOfEmployees) {
-        this.numberOfEmployees = numberOfEmployees;
     }
 
     public double getAvrSalaryOfEmployee() {
         return avrSalaryOfEmployee;
     }
 
-    public void setAvrSalaryOfEmployee(double avrSalaryOfEmployee) {
-        this.avrSalaryOfEmployee = avrSalaryOfEmployee;
-    }
-
     public long getRating() {
         return rating;
-    }
-
-    public void setRating(long rating) {
-        this.rating = rating;
     }
 
     public long getTotalCapital() {
         return totalCapital;
     }
 
-    public void setTotalCapital(long totalCapital) {
-        this.totalCapital = totalCapital;
-    }
-
     public double moneyPaidMonthlyForSalary() {
         return this.numberOfEmployees * this.avrSalaryOfEmployee;
     }
 
-    public abstract int getLimitOfWithdrawal();
+    public int getCommission(final int summ) {
+        int commission;
+        final Currency currency = getCurrency();
+        if (currency.equals(Currency.USD)) {
+            commission = getUSDCommission(summ);
+        } else if (currency.equals(Currency.EUR)) {
+            commission = getEURCommission(summ);
+        } else {
+            commission = 0;
+        }
+        return commission;
+    }
 
-    public abstract int getLimitOfFunding();
+    public int getLimitOfWithdrawal() {
+        int limit;
+        final Currency currency = getCurrency();
+        if (currency.equals(Currency.USD)) {
+            limit = getUSDLimitOfWithdrawal();
+        } else if (currency.equals(Currency.EUR)) {
+            limit = getEURLimitOfWithdrawal();
+        } else {
+            limit = 0;
+        }
+        return limit;
+    }
 
-    public abstract int getMonthlyRate();
+    public int getLimitOfFunding() {
+        int limit;
+        final Currency currency = getCurrency();
+        if (currency.equals(Currency.EUR)) {
+            limit = getUSDLimitOfFunding();
+        } else if (currency.equals(Currency.USD)) {
+            limit = getUSDLimitOfFunding();
+        } else {
+            limit = 0;
+        }
+        return limit;
+    }
 
-    public abstract int getCommission(int summ);
+    public int getMonthlyRate() {
+        int rate;
+        final Currency currency = getCurrency();
+        if (currency.equals(Currency.USD)) {
+            rate = getUSDMonthlyRate();
+        } else if (currency.equals(Currency.EUR)) {
+            rate = getEURMonthlyRate();
+        } else {
+            rate = 0;
+        }
+        return rate;
+    }
+
+    protected abstract int getUSDLimitOfWithdrawal();
+
+    protected abstract int getEURLimitOfWithdrawal();
+
+    protected abstract int getUSDCommission(final int summ);
+
+    protected abstract int getEURCommission(final int summ);
+
+    protected abstract int getUSDLimitOfFunding();
+
+    protected abstract int getEURLimitOfFunding();
+
+    protected abstract int getUSDMonthlyRate();
+
+    protected abstract int getEURMonthlyRate();
 }

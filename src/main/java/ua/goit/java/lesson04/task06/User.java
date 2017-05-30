@@ -5,18 +5,20 @@ package ua.goit.java.lesson04.task06;
  */
 public class User {
 
-    private long id;
-    private String name;
-    private double balance;
-    private int monthsOfEmployment;
-    private String companyName;
+    private final long id;
+    private final String name;
+    
+    private final int monthsOfEmployment;
+    private final String companyName;
+    private final Bank bank;
+
     private int salary;
-    private Bank bank;
+    private double balance;
 
     public User(
-            long id, String name, double balance,
-            int monthsOfEmployment, String companyName,
-            int salary, Bank bank
+            final long id, final String name, final double balance,
+            final int monthsOfEmployment, final String companyName,
+            final int salary, final Bank bank
     ) {
         this.id = id;
         this.name = name;
@@ -44,16 +46,9 @@ public class User {
         return this.id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public double getBalance() {
@@ -68,16 +63,8 @@ public class User {
         return this.monthsOfEmployment;
     }
 
-    public void setMonthsOfEmployment(int monthsOfEmployment) {
-        this.monthsOfEmployment = monthsOfEmployment;
-    }
-
     public String getCompanyName() {
         return this.companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
     }
 
     public int getSalary() {
@@ -90,9 +77,5 @@ public class User {
 
     public Bank getBank() {
         return this.bank;
-    }
-
-    public void setBank(Bank bank) {
-        this.bank = bank;
     }
 }

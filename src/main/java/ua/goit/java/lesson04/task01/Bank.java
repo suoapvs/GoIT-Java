@@ -5,13 +5,13 @@ package ua.goit.java.lesson04.task01;
  */
 public abstract class Bank {
 
-    private long id;
-    private String bankCountry;
-    private Currency currency;
-    private int numberOfEmployees;
-    private double avrSalaryOfEmployee;
-    private long rating;
-    private long totalCapital;
+    private final long id;
+    private final String bankCountry;
+    private final Currency currency;
+    private final int numberOfEmployees;
+    private final double avrSalaryOfEmployee;
+    private final long rating;
+    private final long totalCapital;
 
     public Bank(
             final long id, final String bankCountry, final Currency currency,
@@ -31,56 +31,28 @@ public abstract class Bank {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getBankCountry() {
         return bankCountry;
-    }
-
-    public void setBankCountry(final String bankCountry) {
-        this.bankCountry = bankCountry;
     }
 
     public Currency getCurrency() {
         return currency;
     }
 
-    public void setCurrency(final Currency currency) {
-        this.currency = currency;
-    }
-
     public int getNumberOfEmployees() {
         return numberOfEmployees;
-    }
-
-    public void setNumberOfEmployees(final int numberOfEmployees) {
-        this.numberOfEmployees = numberOfEmployees;
     }
 
     public double getAvrSalaryOfEmployee() {
         return avrSalaryOfEmployee;
     }
 
-    public void setAvrSalaryOfEmployee(final double avrSalaryOfEmployee) {
-        this.avrSalaryOfEmployee = avrSalaryOfEmployee;
-    }
-
     public long getRating() {
         return rating;
     }
 
-    public void setRating(final long rating) {
-        this.rating = rating;
-    }
-
     public long getTotalCapital() {
         return totalCapital;
-    }
-
-    public void setTotalCapital(final long totalCapital) {
-        this.totalCapital = totalCapital;
     }
 
     public abstract int getLimitOfWithdrawal();
