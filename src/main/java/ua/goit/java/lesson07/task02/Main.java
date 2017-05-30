@@ -71,7 +71,7 @@ public class Main {
         Collections.sort(orders, (o1, o2) -> {
             int res = o1.getItemName().compareTo(o2.getItemName());
             if (res == 0) {
-                res = o1.getShopIdentificator().compareTo(o2.getShopIdentificator());
+                res = o1.getShopId().compareTo(o2.getShopId());
                 if (res == 0) {
                     res = o1.getUser().getCity().compareTo(o2.getUser().getCity());
                 }

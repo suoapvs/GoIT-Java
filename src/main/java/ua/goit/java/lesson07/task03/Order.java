@@ -3,84 +3,48 @@ package ua.goit.java.lesson07.task03;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class Order {
+public final class Order {
 
-    private long id;
-    private int price;
-    private Currency currency;
-    private String itemName;
-    private String shopIdentificator;
-    private User user;
+    private final long id;
+    private final int price;
+    private final Currency currency;
+    private final String itemName;
+    private final String shopId;
+    private final User user;
 
     public Order(
-            long id, int price, Currency currency, String itemName,
-            String shopIdentificator, User user
+            final long id, final int price, final Currency currency,
+            final String itemName, final String shopId, final User user
     ) {
         this.id = id;
         this.price = price;
         this.currency = currency;
         this.itemName = itemName;
-        this.shopIdentificator = shopIdentificator;
+        this.shopId = shopId;
         this.user = user;
-    }
-
-    @Override
-    public String toString() {
-        return "Order{" +
-                "id=" + this.id +
-                ", price=" + this.price +
-                ", currency=" + this.currency +
-                ", itemName='" + this.itemName + '\'' +
-                ", shopIdentificator='" + this.shopIdentificator + '\'' +
-                ", user=" + this.user +
-                '}';
     }
 
     public long getId() {
         return this.id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public int getPrice() {
         return this.price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public Currency getCurrency() {
         return this.currency;
     }
 
-    public void setCurrency(Currency currency) {
-        this.currency = currency;
-    }
-
     public String getItemName() {
         return this.itemName;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-
-    public String getShopIdentificator() {
-        return this.shopIdentificator;
-    }
-
-    public void setShopIdentificator(String shopIdentificator) {
-        this.shopIdentificator = shopIdentificator;
+    public String getShopId() {
+        return this.shopId;
     }
 
     public User getUser() {
         return this.user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 }
