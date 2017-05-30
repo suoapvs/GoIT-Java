@@ -3,9 +3,9 @@ package ua.goit.java.lesson06.task05;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class UserUtils {
+public final class UserUtils {
 
-    public static User[] uniqueUsers(final User[] users) {
+    public User[] uniqueUsers(final User[] users) {
         final User[] result = new User[users.length];
         System.arraycopy(users, 0, result, 0, users.length);
         for (int i = 0; i < result.length; i++) {
@@ -20,7 +20,7 @@ public class UserUtils {
         return deleteEmptyUsers(result);
     }
 
-    public static User[] usersWithContitionalBalance(final User[] users, final int balance) {
+    public User[] usersWithContitionalBalance(final User[] users, final int balance) {
         int count = 0;
         for (User user : users) {
             if (user.getBalance() == balance) {
@@ -38,14 +38,14 @@ public class UserUtils {
         return result;
     }
 
-    public static User[] paySalaryToUsers(final User[] users) {
+    public User[] paySalaryToUsers(final User[] users) {
         for (User user : users) {
-            user.setBalance(user.getBalance() + user.getSalary());
+            user.addBalance(user.getSalary());
         }
         return users;
     }
 
-    public static long[] getUsersId(final User[] users) {
+    public long[] getUsersId(final User[] users) {
         final long[] ids = new long[users.length];
         for (int i = 0; i < ids.length; i++) {
             ids[i] = users[i].getId();
@@ -53,7 +53,7 @@ public class UserUtils {
         return ids;
     }
 
-    public static User[] deleteEmptyUsers(final User[] users) {
+    public User[] deleteEmptyUsers(final User[] users) {
         int count = 0;
         for (User user : users) {
             if (user != null) {

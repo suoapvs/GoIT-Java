@@ -1,5 +1,7 @@
 package ua.goit.java.lesson06.task05;
 
+import ua.goit.java.lesson06.task03.ArraysUtils;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -10,18 +12,19 @@ public class HW2 {
 
     public static void main(String[] args) {
         final int length = 10;
-        int[] array = createRandomArray(length);
+        final int[] array = createRandomArray(length);
 
+        final ArraysUtils arraysUtils = new ArraysUtils();
         System.out.println(Arrays.toString(array));
-        System.out.println(ArraysUtils.sum(array));
-        System.out.println(ArraysUtils.min(array));
-        System.out.println(ArraysUtils.max(array));
-        System.out.println(ArraysUtils.maxPositive(array));
-        System.out.println(ArraysUtils.multiplication(array));
-        System.out.println(ArraysUtils.modulus(array));
-        System.out.println(ArraysUtils.secondLargest(array));
-        System.out.println(Arrays.toString(ArraysUtils.reverse(array)));
-        System.out.println(Arrays.toString(ArraysUtils.findEvenElements(array)));
+        System.out.println(arraysUtils.sum(array));
+        System.out.println(arraysUtils.min(array));
+        System.out.println(arraysUtils.max(array));
+        System.out.println(arraysUtils.maxPositive(array));
+        System.out.println(arraysUtils.multiplication(array));
+        System.out.println(arraysUtils.modulus(array));
+        System.out.println(arraysUtils.secondLargest(array));
+        System.out.println(Arrays.toString(arraysUtils.reverse(array)));
+        System.out.println(Arrays.toString(arraysUtils.findEvenElements(array)));
     }
 
     private static int[] createRandomArray(final int length) {
