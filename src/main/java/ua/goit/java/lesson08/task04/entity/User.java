@@ -3,7 +3,7 @@ package ua.goit.java.lesson08.task04.entity;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class User {
+public final class User {
 
     private final long id;
 
@@ -23,7 +23,7 @@ public class User {
     }
 
     @Override
-    public boolean equals(Object object) {
+    public boolean equals(final Object object) {
         if (this == object) {
             return true;
         }

@@ -5,7 +5,7 @@ import ua.goit.java.lesson08.task04.entity.User;
 /**
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
-public class UserDAO extends AbstractDAOImpl<User> implements AbstractDAO<User> {
+public final class UserDAO extends AbstractDAOImpl<User> implements AbstractDAO<User> {
 
     @Override
     public void deleteById(final long id) {
