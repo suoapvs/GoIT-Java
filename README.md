@@ -99,7 +99,7 @@ withdrawal in other case. Commission is 5% for all cases.
 
 ### [Домашнее задание № 2.4](/src/main/java/ua/goit/java/lesson02/task04)
 You need to write method which will fund (пополнение) balance of particular user.
-Print name + balance after funding
+Print name + balance after funding.
 
 <table>
     <tr>
