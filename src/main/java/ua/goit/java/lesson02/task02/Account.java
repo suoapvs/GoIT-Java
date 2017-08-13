@@ -35,12 +35,14 @@ public final class Account {
     public synchronized String withdraw(final double money) {
         final double commission = calcCommission(money);
         final double withdraw = money + commission;
-        final boolean result = withdrawWithCommission(withdraw);
-        if (result) {
-            return "OK " + commission + " " + this.money;
+        final boolean isPossible = withdrawWithCommission(withdraw);
+        final String status;
+        if (isPossible) {
+            status = "OK " + commission + " " + this.money;
         } else {
-            return "NO";
+            status = "NO";
         }
+        return status;
     }
 
     public double getMoney() {
@@ -52,10 +54,10 @@ public final class Account {
     }
 
     private boolean withdrawWithCommission(final double withdraw) {
-        final boolean result = (withdraw <= this.money);
-        if (result) {
+        final boolean isPossible = (withdraw <= this.money);
+        if (isPossible) {
             this.money -= withdraw;
         }
-        return result;
+        return isPossible;
     }
 }

@@ -19,14 +19,14 @@ public final class Account {
     public synchronized String withdraw(final double money) {
         final double commission = calcCommission(money);
         final double withdraw = money + commission;
-        final boolean result = withdrawWithCommission(withdraw);
-        String message;
-        if (result) {
-            message = this.owner + " " + money + " " + this.money;
+        final boolean isPossible = withdrawWithCommission(withdraw);
+        final String status;
+        if (isPossible) {
+            status = this.owner + " " + money + " " + this.money;
         } else {
-            message = this.owner + " NO";
+            status = this.owner + " NO";
         }
-        return message;
+        return status;
     }
 
     public String getOwner() {
@@ -42,10 +42,10 @@ public final class Account {
     }
 
     private boolean withdrawWithCommission(final double withdraw) {
-        final boolean result = (withdraw <= this.money);
-        if (result) {
+        final boolean isPossible = (withdraw <= this.money);
+        if (isPossible) {
             this.money -= withdraw;
         }
-        return result;
+        return isPossible;
     }
 }

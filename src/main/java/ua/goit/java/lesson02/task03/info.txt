@@ -1,0 +1,25 @@
+2.3 You need to write method which withdraw money of particular account owner if he/she can.
+Print name + NO of withdrawal fs not possible and name + sum of withdrawal + balance after withdrawal
+in other case. Commission is 5% for all cases.
+
+Example:
+
+Input:
+int[] balances = {1200, 250, 2000, 500, 3200};
+String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
+String ownerName = Ann;
+double withdrawal = 100;
+
+Output:
+Ann 100 145
+
+-----------------------------------------------------------------------
+
+Input:
+int[] balances = {1200, 250, 2000, 500, 3200};
+String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
+String ownerName = Oww;
+double withdrawal = 490;
+
+Output:
+Oww NO

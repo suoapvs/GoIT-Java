@@ -5,6 +5,17 @@ import java.util.Collection;
 import java.util.List;
 
 /**
+ * 2.4 You need to write method which will fund (пополнение) balance of particular user.
+ * Print name + balance after funding
+ * <p>
+ * Input:
+ * int[] balances = {1200, 250, 2000, 500, 3200};
+ * String[] ownerNames = {"Jane", "Ann", "Jack", "Oww", "Lane"};
+ * String ownerName = Oww;
+ * double withdrawal = 100;
+ * <p>
+ * Output:    Oww 600
+ *
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
 public class Main {
@@ -12,17 +23,17 @@ public class Main {
     public static void main(String[] args) {
         final int[] balances = { 1200, 250, 2000, 500, 3200 };
         final String[] ownerNames = { "Jane", "Ann", "Jack", "Oww", "Lane" };
-        final List<Account> accounts = createAccounts(ownerNames, balances);
+        final Collection<Account> accounts = createAccounts(ownerNames, balances);
         final Bank bank = createBank(accounts);
 
         for (String owner : ownerNames) {
             final double money = System.nanoTime() % 1000;
-            final String result = bank.fund(owner, money);
-            System.out.println(result);
+            final String status = bank.fund(owner, money);
+            System.out.println(status);
         }
     }
 
-    private static List<Account> createAccounts(final String[] ownerNames, final int[] balances) {
+    private static Collection<Account> createAccounts(final String[] ownerNames, final int[] balances) {
         final List<Account> accounts = new ArrayList<>();
         Account temp;
         for (int i = 0; i < ownerNames.length; i++) {

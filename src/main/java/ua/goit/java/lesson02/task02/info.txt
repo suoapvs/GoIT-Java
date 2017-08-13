@@ -1,0 +1,10 @@
+2.2 Continue with BANK example 2.1
+Write method which withdraws money from account and takes commission 5% of the transaction.
+Print OK + commission + balance after withdrawal. Print NO is withdrawal is not possible.
+
+Example:
+    Input               Input
+withdrawal = 10     balance = 100
+withdrawal = 99     balance = 100
+    Output              Output
+OK 0.5 89.5              NO

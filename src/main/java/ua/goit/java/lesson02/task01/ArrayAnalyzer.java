@@ -9,44 +9,46 @@ public final class ArrayAnalyzer implements Analyzer {
 
     @Override
     public int sum(final int[] array) {
-        int sum = 0;
+        /*int sum = 0;
         for (int value : array) {
             sum += value;
         }
-        return sum;
+        return sum;*/
+        return Arrays.stream(array).sum();
     }
 
     @Override
     public double sum(final double[] array) {
-        double sum = 0;
-        for (double value : array) {
+        /*int sum = 0;
+        for (int value : array) {
             sum += value;
         }
-        return sum;
+        return sum;*/
+        return Arrays.stream(array).sum();
     }
 
     @Override
     public int min(final int[] array) {
-        Arrays.sort(array);
-        return array[0];
+        final int minElementIndex = 0;
+        return sortAndGet(array, minElementIndex);
     }
 
     @Override
     public double min(final double[] array) {
-        Arrays.sort(array);
-        return array[0];
+        final int minElementIndex = 0;
+        return sortAndGet(array, minElementIndex);
     }
 
     @Override
     public int max(final int[] array) {
-        Arrays.sort(array);
-        return array[array.length - 1];
+        final int maxElementIndex = array.length - 1;
+        return sortAndGet(array, maxElementIndex);
     }
 
     @Override
     public double max(final double[] array) {
-        Arrays.sort(array);
-        return array[array.length - 1];
+        final int maxElementIndex = array.length - 1;
+        return sortAndGet(array, maxElementIndex);
     }
 
     @Override
@@ -79,25 +81,41 @@ public final class ArrayAnalyzer implements Analyzer {
         return result;
     }
 
+    // modulus of first and last element
     @Override
     public int modulus(final int[] array) {
-        return (array[0] % array[array.length - 1]);
+        final int firstElementIndex = 0;
+        final int lastElementIndex = array.length - 1;
+        return (array[firstElementIndex] % array[lastElementIndex]);
     }
 
+    // modulus of first and last element
     @Override
     public double modulus(final double[] array) {
-        return (array[0] % array[array.length - 1]);
+        final int firstElementIndex = 0;
+        final int lastElementIndex = array.length - 1;
+        return (array[firstElementIndex] % array[lastElementIndex]);
     }
 
     @Override
     public int secondLargest(final int[] array) {
-        Arrays.sort(array);
-        return array[1];
+        final int secondLargestElementIndex = (array.length > 1) ? 1 : 0;
+        return sortAndGet(array, secondLargestElementIndex);
     }
 
     @Override
     public double secondLargest(final double[] array) {
+        final int secondLargestElementIndex = (array.length > 1) ? 1 : 0;
+        return sortAndGet(array, secondLargestElementIndex);
+    }
+
+    private int sortAndGet(final int[] array, final int index) {
         Arrays.sort(array);
-        return array[1];
+        return array[index];
+    }
+
+    private double sortAndGet(final double[] array, final int index) {
+        Arrays.sort(array);
+        return array[index];
     }
 }

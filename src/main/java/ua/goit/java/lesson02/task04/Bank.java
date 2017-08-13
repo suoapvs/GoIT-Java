@@ -12,7 +12,9 @@ public final class Bank {
     private final Map<String, Account> accounts = new HashMap<>();
 
     public void add(final Account account) {
-        this.accounts.put(account.getOwner(), account);
+        if (isNotNull(account)) {
+            this.accounts.put(account.getOwner(), account);
+        }
     }
 
     public void addAll(final Collection<Account> accounts) {
@@ -21,23 +23,27 @@ public final class Bank {
 
     public String withdraw(final String ownerName, final double money) {
         final Account account = this.accounts.get(ownerName);
-        String result;
-        if (account != null) {
-            result = account.withdraw(money);
+        final String status;
+        if (isNotNull(account)) {
+            status = account.withdraw(money);
         } else {
-            result = "NO";
+            status = "NO";
         }
-        return result;
+        return status;
     }
 
-    public String fund(final String ownerName,final double money) {
+    public String fund(final String ownerName, final double money) {
         final Account account = this.accounts.get(ownerName);
-        String result;
-        if (account != null) {
-            result = account.fund(money);
+        final String status;
+        if (isNotNull(account)) {
+            status = account.fund(money);
         } else {
-            result = "NO";
+            status = "NO";
         }
-        return result;
+        return status;
+    }
+
+    private boolean isNotNull(final Object object) {
+        return object != null;
     }
 }
