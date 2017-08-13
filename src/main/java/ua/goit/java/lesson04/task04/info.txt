@@ -1,0 +1,15 @@
+4.4 Создайте следующую структуру:
+Интерфейс BankSystem и его реализацию BankSystemImpl.
+
+В классе User должны быть следующие поля:
+```
+long id
+String name
+double balance
+int monthsOfEmployment
+String companyName
+int salary
+Bank bank
+```
+
+Класс User не имеет собственных методов. Но перегружает метод toString.

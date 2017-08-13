@@ -1,6 +1,19 @@
 package ua.goit.java.lesson04.task05;
 
 /**
+ * 4.5 Создайте следующую структуру:
+ * Класс Main с методом main, где вы должны создать 6 объектов класса User
+ * (2 - USBank, 2 - EUBank, 2 - ChinaBank).
+ * <p>
+ * Создать интерфейс BankSystem с методами:
+ * ```
+ * void withdrawOfUser(User user, int amount)
+ * void fundUser(User user, int amount)
+ * void transferMoney(User fromUser, User toUser, int amount)
+ * void paySalary(User user)
+ * ```
+ * и его релизацию.
+ *
  * @author Yurii Salimov (yuriy.alex.salimov@gmail.com)
  */
 public class Main {

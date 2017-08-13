@@ -31,7 +31,7 @@ public final class EUBank extends Bank {
     }
 
     @Override
-    public int getCommission(int summ) {
+    public int getCommission(final int summ) {
         return 0;
     }
 

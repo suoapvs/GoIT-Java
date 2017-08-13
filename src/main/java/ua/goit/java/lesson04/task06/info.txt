@@ -1,0 +1,6 @@
+4.6 You need to following structure: abstarct class Bank and three classes that extends it:
+USBank, EUBank, ChinaBank. Enum Currency. Class User that represents User of our Bank System.
+Interface BankSystem and its implementation BankSystemImpl.
+
+Create Main class with main method, where you should create 6 Users: 2 of USBank, 2 of EUBank
+and 2 of ChinaBank. Run four different operations with every User’s balance and print its objects to console.

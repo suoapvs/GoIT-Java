@@ -1,0 +1,23 @@
+4.1 Создайте следующую структуру:
+Абстрактный класс Bank и 3 класса, которые его расширяют: USBank, EUBank, ChinaBank.
+
+Абстрактный класс Bank должен содержать поля:
+```
+long id
+String bankCountry
+Currency currency
+int numberOfEmployees
+double avrSalaryOfEmployee
+long rating
+long totalCapital
+```
+
+Создайте get-,set-методы и конструктор с аргументами - всеми полями.
+Методы:
+```
+abstract int getLimitOfWithdrawal()
+abstract int getLimitOfFunding()
+abstract int getMonthlyRate()
+abstract int getCommission(int summ)
+double moneyPaidMonthlyForSalary()
+```
