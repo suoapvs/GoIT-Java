@@ -1,0 +1,17 @@
+3.4 Создайте класс User со следующими полями:
+```
+ String name,
+ int balance,
+ int monthsOfEmployment,
+ String companyName,
+ int salary,
+ String currency.
+```
+
+Создайте get-, set-методы и конструктор с аргументами - всеми полями класса.
+Напишите методы:
+```
+ void paySalary() - добавляет заработную плату к балансу пользователя
+ withdraw(int summ) - снимает деньги с баланса с комиссией 5%, если сумма < 1000 и комиссией 10% в других случаях
+ companyNameLength - вычисляет длину имя компании
+ monthIncreaser(int addMonth) - увеличивает monthsOfEmployment на addMonth

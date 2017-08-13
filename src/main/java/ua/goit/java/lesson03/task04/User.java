@@ -5,6 +5,10 @@ package ua.goit.java.lesson03.task04;
  */
 public final class User {
 
+    private final static int COMMISSION_BARRIER = 1000;
+    private final static int COMMISSION_LESS_BARRIER = 5;
+    private final static int COMMISSION_GREAT_BARRIER = 10;
+
     private final String name;
     private final String companyName;
     private final int salary;
@@ -28,9 +32,8 @@ public final class User {
         this.balance += this.salary;
     }
 
-    public synchronized void withdraw(int summ) {
-        final int commission = (summ < 1000) ? 5 : 10;
-        final int withdraw = summ + summ * commission / 100;
+    public synchronized void withdraw(final int money) {
+        final int withdraw = calcWithdraw(money);
         if (withdraw <= this.balance) {
             this.balance -= withdraw;
         }
@@ -74,5 +77,14 @@ public final class User {
 
     public String getCurrency() {
         return this.currency;
+    }
+
+    private int calcWithdraw(final int money) {
+        final int commission = calcCommission(money);
+        return money + money * commission / 100;
+    }
+
+    private int calcCommission(final int money) {
+        return (money < COMMISSION_BARRIER) ? COMMISSION_LESS_BARRIER : COMMISSION_GREAT_BARRIER;
     }
 }
